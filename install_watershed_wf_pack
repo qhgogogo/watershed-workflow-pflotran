@@ -8,3 +8,13 @@ sudo apt install zlib1g-dev
 
 Use anarconda to install:
 conda create -n watershed_workflow -c conda-forge -c defaults python=3 ipython ipykernel jupyterlab nb_conda_kernels numpy matplotlib scipy meshpy fiona rasterio shapely cartopy pyepsg descartes pyproj requests sortedcontainers attrs pytest pandas geopandas netcdf4 h5py tqdm libarchive
+#
+# To activate this environment, use
+#
+#     $ conda activate watershed_workflow
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+conda activate watershed_workflow
