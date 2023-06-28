@@ -1,0 +1,10 @@
+ping -c 2 8.8.8.8  % check internet
+sudo nano /etc/resolv.conf
+nameserver 8.8.8.8 %change nameserver to 8.8.8.8
+
+%Then:
+sudo apt update
+sudo apt install zlib1g-dev
+
+Use anarconda to install:
+conda create -n watershed_workflow -c conda-forge -c defaults python=3 ipython ipykernel jupyterlab nb_conda_kernels numpy matplotlib scipy meshpy fiona rasterio shapely cartopy pyepsg descartes pyproj requests sortedcontainers attrs pytest pandas geopandas netcdf4 h5py tqdm libarchive
