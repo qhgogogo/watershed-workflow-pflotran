@@ -1,5 +1,5 @@
 ping -c 2 8.8.8.8  % check internet
-sudo nano /etc/resolv.conf
+sudo vi /etc/resolv.conf
 nameserver 8.8.8.8 %change nameserver to 8.8.8.8
 
 %Then:
@@ -16,5 +16,5 @@ conda create -n watershed_workflow -c conda-forge -c defaults python=3 ipython i
 # To deactivate an active environment, use
 #
 #     $ conda deactivate
-
+#     $ conda remove --name watershed_workflow --all  %% unistall watershed workflow
 conda activate watershed_workflow
