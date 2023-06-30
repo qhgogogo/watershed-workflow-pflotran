@@ -6,8 +6,14 @@ nameserver 8.8.8.8 %change nameserver to 8.8.8.8
 sudo apt update
 sudo apt install zlib1g-dev
 
-Use anarconda to install:
+# install miniconda
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o miniconda.sh
+bash miniconda.sh
 conda create -n watershed_workflow -c conda-forge -c defaults python=3 ipython ipykernel jupyterlab nb_conda_kernels numpy matplotlib scipy meshpy fiona rasterio shapely cartopy pyepsg descartes pyproj requests sortedcontainers attrs pytest pandas geopandas netcdf4 h5py tqdm libarchive
+# or use versions:
+conda create -n watershed_workflow -c conda-forge -c defaults python=3.10 ipython ipykernel jupyterlab nb_conda_kernels numpy matplotlib scipy meshpy fiona=1.8.21 rasterio shapely=1.8.1 cartopy pyepsg descartes pyproj requests sortedcontainers attrs pytest pandas geopandas netcdf4 h5py tqdm libarchive
+
+
 #
 # To activate this environment, use
 #
@@ -18,3 +24,5 @@ conda create -n watershed_workflow -c conda-forge -c defaults python=3 ipython i
 #     $ conda deactivate
 #     $ conda remove --name watershed_workflow --all  %% unistall watershed workflow
 conda activate watershed_workflow
+
+# sudo apt install cmake %%install cmake
